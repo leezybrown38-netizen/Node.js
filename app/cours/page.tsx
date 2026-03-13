@@ -245,7 +245,7 @@ export default function CourseRoadmap()
             <a href="#" className="hover:text-slate-600">Conditions</a>
             <a href="#" className="hover:text-slate-600">API</a>
           </div>
-          <p>© 2026 EduPlateForme. Tous droits réservés.</p>
+          <p>© 2026 EduPlateForme.  Tous droits réservés. </p>
       </footer>
     </div>
   );
