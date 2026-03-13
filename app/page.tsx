@@ -7,7 +7,7 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 
-// --- Données pour générer les cartes dynamiquement ---
+
 const featuredSubjects = [
   {
     id: 1,
@@ -51,11 +51,11 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen bg-[#FAFAFA] font-sans text-slate-800">
       
-      {/* Header */}
+      
       <header className="bg-white px-8 py-5 flex items-center justify-between border-b border-slate-100">
         <div className="flex items-center gap-10">
           <div className="flex items-center">
-            {/* Ton logo EduPlateForme */}
+            
             <img src="/logo.png" alt="Logo EduPlateForme" className="h-8 w-auto" />
           </div>
           <nav className="hidden md:flex gap-8 text-sm font-medium text-slate-600">
@@ -82,7 +82,7 @@ export default function LandingPage() {
 
       <main className="max-w-6xl mx-auto px-6 pt-20 pb-24">
         
-        {/* Section Hero */}
+        
         <section className="text-center max-w-3xl mx-auto mb-28">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-50 text-cyan-600 text-xs font-bold tracking-widest uppercase mb-8">
             <Sparkles className="w-3 h-3" />
@@ -114,7 +114,7 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* Section Sujets à la une */}
+        
         <section className="mb-24">
           <div className="flex justify-between items-end mb-8">
             <div>
@@ -129,11 +129,11 @@ export default function LandingPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {featuredSubjects.map((subject) => (
               <div key={subject.id} className="bg-white rounded-3xl overflow-hidden shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-slate-100 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 group cursor-pointer">
-                {/* Haut de la carte coloré */}
+                
                 <div className={`h-48 ${subject.bgColor} flex items-center justify-center group-hover:scale-105 transition-transform duration-500`}>
                   {subject.icon}
                 </div>
-                {/* Contenu de la carte */}
+                
                 <div className="p-8">
                   <div className="flex justify-between items-center mb-6">
                     <div className="w-8 h-8 rounded-lg bg-slate-50 flex items-center justify-center border border-slate-100">
@@ -154,7 +154,7 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* Section Catégories populaires */}
+        
         <section>
           <h2 className="text-2xl font-bold text-slate-900 mb-8">Catégories populaires</h2>
           <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
@@ -169,7 +169,7 @@ export default function LandingPage() {
 
       </main>
 
-      {/* Footer */}
+      
       <footer className="bg-white border-t border-slate-100 py-8">
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between text-sm text-slate-500">
           <div className="flex items-center gap-2 mb-4 md:mb-0">

@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, CheckCircle, BookOpen, Trophy } from 'lucide-react';
 import { useGamificationStore } from '../../../store/useGamificationStore';
 
-// Le Quiz adapté au cours
+
 const quizData = [
   {
     question: "Comment déclare-t-on une variable en Python ?",
@@ -26,7 +26,7 @@ export default function BasesPythonCourse() {
   const [quizFinished, setQuizFinished] = useState(false);
   const [score, setScore] = useState(0);
   
-  // Connexion à ton système d'XP
+  
   const addXP = useGamificationStore((state) => state.addXP);
 
   const handleAnswer = (selectedIndex: number) => {
@@ -40,13 +40,13 @@ export default function BasesPythonCourse() {
       setCurrentQuestion(currentQuestion + 1);
     } else {
       setQuizFinished(true);
-      addXP(currentScore * 50); // 50 XP par bonne réponse
+      addXP(currentScore * 50); 
     }
   };
 
   return (
     <div className="min-h-screen bg-white font-sans text-slate-800">
-      {/* Header simple */}
+      
       <header className="border-b border-slate-100 py-4 px-6 flex items-center justify-between sticky top-0 bg-white/80 backdrop-blur-md z-10">
         <Link href="/cours" className="flex items-center gap-2 text-slate-500 hover:text-cyan-500 transition-colors">
           <ArrowLeft className="w-5 h-5" />
@@ -59,7 +59,7 @@ export default function BasesPythonCourse() {
       </header>
 
       <main className="max-w-3xl mx-auto px-6 py-12">
-        {/* En-tête du cours */}
+        
         <div className="mb-12">
           <div className="text-cyan-500 font-bold text-sm tracking-wider uppercase mb-3">Module Python</div>
           <h1 className="text-4xl font-black text-slate-900 mb-6">Les bases de Python</h1>
@@ -69,7 +69,7 @@ export default function BasesPythonCourse() {
           </p>
         </div>
 
-        {/* Contenu du cours (Style Wiki) */}
+        
         <div className="prose prose-slate max-w-none mb-16">
           <h2 className="text-2xl font-bold text-slate-800 mb-4 border-b border-slate-100 pb-2">1. Les Variables</h2>
           <p className="text-slate-600 mb-4">
@@ -78,7 +78,7 @@ export default function BasesPythonCourse() {
           <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 font-mono text-sm text-slate-800 mb-8">
             <span className="text-slate-400"># Ceci est un commentaire</span><br />
             age = <span className="text-cyan-600">20</span><br />
-            nom = <span className="text-orange-500">"Léonnel"</span>
+            nom = <span className="text-orange-500">"Utilisateur"</span>
           </div>
 
           <h2 className="text-2xl font-bold text-slate-800 mb-4 border-b border-slate-100 pb-2">2. Afficher du texte</h2>
@@ -90,7 +90,7 @@ export default function BasesPythonCourse() {
           </div>
         </div>
 
-        {/* Section Quiz */}
+        
         <div className="border-t border-slate-200 pt-12">
           {!showQuiz ? (
             <div className="text-center bg-cyan-50 rounded-2xl p-8 border border-cyan-100">

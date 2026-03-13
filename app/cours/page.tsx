@@ -73,7 +73,7 @@ export default function CourseRoadmap()
   }, []);
   return (
     <div className="min-h-screen bg-[#F8FAFC] font-sans text-slate-800 flex flex-col">
-      {/* Navbar */}
+      
       <header className="bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between sticky top-0 z-50">
         <div className="flex items-center gap-8">
           <div className="flex items-center">
@@ -112,10 +112,10 @@ export default function CourseRoadmap()
         </div>
       </header>
 
-      {/* Main Content */}
+      
       <main className="flex-1 max-w-6xl mx-auto w-full p-6 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         
-        {/* Left Sidebar (Infos du cours) */}
+        
         <aside className="lg:col-span-4 space-y-6">
           <div className="bg-white rounded-2xl p-6 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.1)] border border-slate-100">
             <div className="text-[10px] font-bold tracking-wider text-teal-500 uppercase mb-2">Informatique</div>
@@ -176,7 +176,7 @@ export default function CourseRoadmap()
           </div>
         </aside>
 
-        {/* Right Content (Feuille de route) */}
+        
         <section className="lg:col-span-8">
           <div className="flex items-center gap-2 mb-6">
             <BookOpen className="w-5 h-5 text-teal-500" />
@@ -184,20 +184,20 @@ export default function CourseRoadmap()
           </div>
 
           <div className="relative">
-            {/* Ligne verticale de la timeline */}
+            
             <div className="absolute left-[19px] top-6 bottom-10 w-0.5 bg-slate-200"></div>
 
             <div className="space-y-6">
               {steps.map((step) => (
                 <div key={step.id} className="relative flex gap-6">
-                  {/* Icône de timeline */}
+                  
                   <div className="relative z-10 shrink-0">
                     <div className={`w-10 h-10 rounded-full border-2 flex items-center justify-center ${step.iconColor}`}>
                       <step.Icon className="w-5 h-5" />
                     </div>
                   </div>
 
-                  {/* Carte d'étape */}
+                  
                   <div className={`flex-1 bg-white rounded-2xl p-6 border ${step.status === 'in-progress' ? 'border-blue-200 shadow-md ring-1 ring-blue-50' : 'border-slate-100 shadow-sm'} ${step.status === 'locked' ? 'opacity-60' : ''}`}>
                     <div className="flex justify-between items-start mb-2">
                       <h3 className="font-bold text-slate-800">{step.title}</h3>
@@ -234,7 +234,7 @@ export default function CourseRoadmap()
         </section>
       </main>
       
-      {/* Footer minimaliste */}
+      
       <footer className="bg-white border-t border-slate-200 py-6 mt-12 text-center text-xs text-slate-400 flex flex-col md:flex-row items-center justify-between px-8">
         <div className="flex items-center gap-2 mb-4 md:mb-0">
   <img src="/logo.png" alt="Logo EduPlateForme" className="h-6 w-auto grayscale opacity-70" />

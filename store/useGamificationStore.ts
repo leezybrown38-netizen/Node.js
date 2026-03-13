@@ -18,7 +18,7 @@ export const useGamificationStore = create<GamificationState>()(
       
       addXP: (amount) => set((state) => {
         const newXp = state.xp + amount;
-        // 1 niveau tous les 100 XP
+        
         const newLevel = Math.floor(newXp / 100) + 1; 
         
         return { 
@@ -33,7 +33,7 @@ export const useGamificationStore = create<GamificationState>()(
       }),
     }),
     {
-      name: 'wiki-learn-storage', // Sauvegarde locale
+      name: 'wiki-learn-storage', 
     }
   )
 );
